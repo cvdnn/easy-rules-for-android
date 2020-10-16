@@ -19,15 +19,16 @@ Please read the EasyRules link for a quick intro to the concepts and workflows.
 ```java
 @Rule(name = "weather rule", description = "if it rains then take an umbrella")
 public class WeatherRule {
+    private static final String TAG = "WeatherRule";
 
     @Condition
     public boolean itRains(@Fact("rain") boolean rain) {
         return rain;
     }
-    
+
     @Action
     public void takeAnUmbrella() {
-        System.out.println("It rains, take an umbrella!");
+        Log.i(TAG, "It rains, take an umbrella!");
     }
 }
 ```
