@@ -93,8 +93,7 @@ public final class DefaultRulesEngine extends AbstractRulesEngine {
             try {
                 evaluationResult = rule.evaluate(facts);
             } catch (RuntimeException exception) {
-                Log.e(TAG, "Rule '" + name + "' evaluated with error");
-                Log.e(TAG, exception);
+                android.util.Log.e(TAG, "Rule '" + name + "' evaluated with error", exception);
 
                 triggerListenersOnEvaluationError(rule, facts, exception);
                 // give the option to either skip next rules on evaluation error or continue by considering the evaluation error as false
@@ -117,8 +116,7 @@ public final class DefaultRulesEngine extends AbstractRulesEngine {
                         break;
                     }
                 } catch (Exception exception) {
-                    Log.e(TAG, "Rule '" + name + "' performed with error");
-                    Log.e(TAG, exception);
+                    android.util.Log.e(TAG, "Rule '" + name + "' performed with error", exception);
 
                     triggerListenersOnFailure(rule, exception, facts);
                     if (parameters.isSkipOnFirstFailedRule()) {

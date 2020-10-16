@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+
+android {
+    defaultConfig {
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    implementation project(':easy-rules-core')
+    implementation project(':easy-rules-support')
+
+    implementation 'org.mvel:mvel2:2.4.10.Final'
+}
