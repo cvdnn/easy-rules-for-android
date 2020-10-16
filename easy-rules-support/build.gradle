@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+
+android {
+    defaultConfig {
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    implementation project(':easy-rules-core')
+
+    implementation 'org.yaml:snakeyaml:1.18:android'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.0-rc1'
+}
