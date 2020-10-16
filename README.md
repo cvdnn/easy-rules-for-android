@@ -47,17 +47,17 @@ Rule weatherRule = new RuleBuilder()
 ### 2. Then, fire it!
 
 ```java
-    public static void rainFire(boolean isRain) {
-        Facts facts = new Facts();
-        facts.put("rain", isRain);
+public static void rainFire(boolean isRain) {
+    Facts facts = new Facts();
+    facts.put("rain", isRain);
 
-        // define rules
-        WeatherRule weatherRule = new WeatherRule();
-        Rules rules = new Rules();
-        rules.register(weatherRule);
+    // define rules
+    WeatherRule weatherRule = new WeatherRule();
+    Rules rules = new Rules();
+    rules.register(weatherRule);
 
-        // fire rules on known facts
-        RulesEngine rulesEngine = new DefaultRulesEngine();
-        rulesEngine.fire(rules, facts);
-    }
+    // fire rules on known facts
+    RulesEngine rulesEngine = new DefaultRulesEngine();
+    rulesEngine.fire(rules, facts);
+}
 ```
