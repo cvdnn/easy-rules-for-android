@@ -53,9 +53,9 @@ Rule weatherRule = new MVELRule()
         .then("System.out.println(\"It rains, take an umbrella!\");");
 ```
 
-#### Or using a rule descriptor:
+#### Or using a MVEL rule descriptor:
 
-Like in the following `weather_rule.yml` example file:
+Like in the following `mvel_rule.yml` example file:
 
 ```yaml
 name: "weather rule"
@@ -67,7 +67,24 @@ actions:
 
 ```java
 MVELRuleFactory ruleFactory = new MVELRuleFactory(new YamlRuleDefinitionReader());
-Rule weatherRule = ruleFactory.createRule(App.Res.openRawResource(R.raw.weather_rule), UTF_8));
+Rule weatherRule = ruleFactory.createRule(App.Res.openRawResource(R.raw.wvel_rule), UTF_8));
+```
+
+#### Or using a Spel rule descriptor:
+
+Like in the following `spel_rule.yml` example file:
+
+```yaml
+name: "weather rule"
+description: "when it rains, then take an umbrella"
+condition: "#{ ['rain'] == true }"
+actions:
+  - "#{ T(System).out.println(\"It rains, take an umbrella!\") }"
+```
+
+```java
+SpELRuleFactory ruleFactory = new SpELRuleFactory(new YamlRuleDefinitionReader());
+Rule weatherRule = ruleFactory.createRule(App.Res.openRawResource(R.raw.spel_rule), UTF_8));
 ```
 
 ### 2. Then, fire it!

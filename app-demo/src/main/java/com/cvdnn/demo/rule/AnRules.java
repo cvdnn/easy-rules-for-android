@@ -15,6 +15,7 @@ import org.jeasy.rules.core.Log;
 import org.jeasy.rules.core.RuleBuilder;
 import org.jeasy.rules.mvel.MVELRule;
 import org.jeasy.rules.mvel.MVELRuleFactory;
+import org.jeasy.rules.spel.SpELRuleFactory;
 import org.jeasy.rules.support.reader.YamlRuleDefinitionReader;
 
 import java.io.InputStreamReader;
@@ -28,7 +29,7 @@ public class AnRules {
         facts.put("rain", isRain);
 
         // define rules
-        Rule weatherRule = loadMVELRule();
+        Rule weatherRule = loadSpelRule();
         Rules rules = new Rules();
         rules.register(weatherRule);
 
@@ -59,7 +60,20 @@ public class AnRules {
 
         try {
             rule = new MVELRuleFactory(new YamlRuleDefinitionReader()).createRule(
-                    new InputStreamReader(App.Res.openRawResource(R.raw.weather_rule), UTF_8));
+                    new InputStreamReader(App.Res.openRawResource(R.raw.mvel_rule), UTF_8));
+        } catch (Exception e) {
+            Log.e(e);
+        }
+
+        return rule;
+    }
+
+    public static Rule loadSpelRule() {
+        Rule rule = null;
+
+        try {
+            rule = new SpELRuleFactory(new YamlRuleDefinitionReader()).createRule(
+                    new InputStreamReader(App.Res.openRawResource(R.raw.spel_rule), UTF_8));
         } catch (Exception e) {
             Log.e(e);
         }

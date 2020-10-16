@@ -1,0 +1,5 @@
+name: ":: loadSpelRule"
+description: "when it rains, then take an umbrella"
+condition: "#{ ['rain'] == true }"
+actions:
+  - "#{ T(System).out.println(\"It rains, take an umbrella!\") }"
