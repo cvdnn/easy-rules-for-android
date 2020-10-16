@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    defaultConfig {
+        applicationId "android.rule.demo"
+
+        versionCode 1
+        versionName "1.0"
+
+        //在manifest中设置${appName}占位符
+//        manifestPlaceholders = [appName:"@string/app_name"]
+    }
+
+//    buildTypes {
+//        debug{
+//            // 设置debug时的包名为com.kale.debug
+//            applicationIdSuffix '.debug'
+//            manifestPlaceholders = [
+//                    appName: "123456",
+//            ]
+//        }
+//    }
+}
+
+dependencies {
+    implementation project(':easy-rules-core')
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+
+    implementation 'org.yaml:snakeyaml:1.18:android'
+}

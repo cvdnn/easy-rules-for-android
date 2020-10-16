@@ -1,0 +1,12 @@
+apply plugin: 'com.android.library'
+
+android {
+    defaultConfig {
+        versionName "1.0"
+    }
+}
+
+dependencies {
+
+
+}
