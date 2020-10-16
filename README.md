@@ -78,7 +78,7 @@ public static void rainFire(boolean isRain) {
     facts.put("rain", isRain);
 
     // define rules
-    WeatherRule weatherRule = ...;
+    Rule weatherRule = ...;
     Rules rules = new Rules();
     rules.register(weatherRule);
 
