@@ -8,8 +8,7 @@ android {
 
 dependencies {
     implementation project(':easy-rules-core')
+    implementation project(':easy-rules-support')
 
-    implementation 'org.yaml:snakeyaml:1.18:android'
-
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.0-rc1'
+    implementation 'org.springframework:spring-expression:5.2.9.RELEASE'
 }

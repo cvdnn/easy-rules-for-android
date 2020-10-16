@@ -1,4 +1,3 @@
-include ':easy-rules-mvel'
-include ':easy-rules-core', ':easy-rules-support'
+include ':easy-rules-core', ':easy-rules-support', ':easy-rules-mvel', ':easy-rules-spel'
 
 include ':app-demo'

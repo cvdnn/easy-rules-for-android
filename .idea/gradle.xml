@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/app-demo" />
             <option value="$PROJECT_DIR$/easy-rules-core" />
             <option value="$PROJECT_DIR$/easy-rules-mvel" />
+            <option value="$PROJECT_DIR$/easy-rules-spel" />
             <option value="$PROJECT_DIR$/easy-rules-support" />
           </set>
         </option>

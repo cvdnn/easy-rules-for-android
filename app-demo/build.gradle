@@ -4,9 +4,6 @@ android {
     defaultConfig {
         applicationId "android.rule.demo"
 
-        versionCode 1
-        versionName "1.0"
-
         //在manifest中设置${appName}占位符
 //        manifestPlaceholders = [appName:"@string/app_name"]
     }
