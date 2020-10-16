@@ -4,7 +4,7 @@
 
 Please read the EasyRules link for a quick intro to the concepts and workflows.
 
-[![Build Status](https://travis-ci.org/CrowdStrike/easyrulesgo.svg?branch=master)](https://travis-ci.org/CrowdStrike/easyrulesgo)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.jeasy/easy-rules-core/badge.svg?style=flat)](http://search.maven.org/#artifactdetails|org.jeasy|easy-rules-core|4.0.0|)
 
   - Implements default rules engine
   - Allows for composite rule (all or nothing)
