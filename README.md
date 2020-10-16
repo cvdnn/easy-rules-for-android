@@ -43,6 +43,33 @@ Rule weatherRule = new RuleBuilder()
         .build();
 ```
 
+#### Or using an Expression Language:
+
+```java
+Rule weatherRule = new MVELRule()
+        .name("weather rule")
+        .description("if it rains then take an umbrella")
+        .when("rain == true")
+        .then("System.out.println(\"It rains, take an umbrella!\");");
+```
+
+#### Or using a rule descriptor:
+
+Like in the following `weather_rule.yml` example file:
+
+```yaml
+name: "weather rule"
+description: "if it rains then take an umbrella"
+condition: "rain == true"
+actions:
+  - "System.out.println(\"It rains, take an umbrella!\");"
+```
+
+```java
+MVELRuleFactory ruleFactory = new MVELRuleFactory(new YamlRuleDefinitionReader());
+Rule weatherRule = ruleFactory.createRule(App.Res.openRawResource(R.raw.weather_rule), UTF_8));
+```
+
 ### 2. Then, fire it!
 
 ```java
@@ -51,7 +78,7 @@ public static void rainFire(boolean isRain) {
     facts.put("rain", isRain);
 
     // define rules
-    WeatherRule weatherRule = new WeatherRule();
+    WeatherRule weatherRule = ...;
     Rules rules = new Rules();
     rules.register(weatherRule);
 

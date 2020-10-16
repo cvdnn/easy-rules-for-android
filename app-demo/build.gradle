@@ -24,6 +24,8 @@ android {
 
 dependencies {
     implementation project(':easy-rules-core')
+    implementation project(':easy-rules-support')
+    implementation project(':easy-rules-mvel')
 
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
 

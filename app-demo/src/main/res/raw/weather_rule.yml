@@ -1,4 +1,4 @@
-name: "weather rule"
+name: ":: loadMVELRule"
 description: "if it rains then take an umbrella"
 condition: "rain == true"
 actions:
