@@ -1,7 +1,6 @@
 # EasyRules4Android
 
-A port of EasyRules to Android
-http://www.easyrules.org/
+[EasyRules4Android](https://github.com/cvdnn/easy-rules-for-android.git) : A port of [EasyRules](https://github.com/j-easy/easy-rules.git) to Android by [@cvdnn](https://github.com/cvdnn)
 
 Please read the EasyRules link for a quick intro to the concepts and workflows.
 
