@@ -1,5 +1,5 @@
 # EasyRules4Android
-=========
+
 A port of EasyRules to Android
 http://www.easyrules.org/
 
